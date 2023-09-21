@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/constants.dart';
+import 'package:flutter_portofolio/core/utils/my_space.dart';
 import 'package:flutter_portofolio/core/utils/my_styles.dart';
+import 'animated_circular_skill.dart';
+import 'area_info_text.dart';
 import 'my_info.dart';
 
 class SideMenu extends StatelessWidget {
@@ -13,70 +16,64 @@ class SideMenu extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          MyInfo(),
+          const MyInfo(),
           Expanded(
             child: SingleChildScrollView(
-              padding: EdgeInsets.all(defaultPadding),
+              padding: const EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
-                  AreaInfoText(
+                  const AreaInfoText(
                     title: "Residence",
                     text: "Algeria",
                   ),
-                  AreaInfoText(
+                  const AreaInfoText(
                     title: "City",
                     text: "Saida",
                   ),
-                  AreaInfoText(
+                  const AreaInfoText(
                     title: "Age",
                     text: "25",
                   ),
-                  Divider(),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: defaultPadding),
-                    child: Text(
-                      "Skills",
-                      style: MyStyles.textStyle18.copyWith(
-                        color: kTextColorWhite,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Divider(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: defaultPadding),
+                        child: Text(
+                          "Skills",
+                          style: MyStyles.textStyle18.copyWith(
+                            color: kTextColorWhite,
+                          ),
+                        ),
                       ),
-                    ),
+                      const Row(
+                        children: [
+                          Expanded(
+                            child: AnimatedCircularSkill(
+                                lable: 'Flutter', percentage: 0.95),
+                          ),
+                          SizedBox(width: defaultPadding),
+                          Expanded(
+                            child: AnimatedCircularSkill(
+                                lable: 'Firebase', percentage: 0.8),
+                          ),
+                          SizedBox(width: defaultPadding),
+                          Expanded(
+                            child: AnimatedCircularSkill(
+                                lable: 'Rest Apis', percentage: 0.8),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  CircularProgressIndicator(
-                    value: 0.8,
-                    color: primaryColor,
-                    backgroundColor: darkColor,
-                  )
                 ],
               ),
             ),
           )
         ],
       ),
-    );
-  }
-}
-
-class AreaInfoText extends StatelessWidget {
-  const AreaInfoText({
-    super.key,
-    this.title,
-    this.text,
-  });
-  final String? title, text;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title!,
-            style: const TextStyle(
-              color: kTextColorWhite,
-            )),
-        Text(
-          text!,
-        )
-      ],
     );
   }
 }

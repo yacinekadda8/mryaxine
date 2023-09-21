@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portofolio/constants.dart';
 
 abstract class MyStyles {
   static const textStyle14 = TextStyle(
@@ -18,8 +19,18 @@ abstract class MyStyles {
     fontWeight: FontWeight.w600,
     // fontFamily: 'GT-Sectra-Fine',
   );
+  static const textStyle22 = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    // fontFamily: 'GT-Sectra-Fine',
+  );
   static const textStyle24 = TextStyle(
-    fontSize: 20,
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    // fontFamily: 'GT-Sectra-Fine',
+  );
+  static const textStyle28 = TextStyle(
+    fontSize: 28,
     fontWeight: FontWeight.w600,
     // fontFamily: 'GT-Sectra-Fine',
   );

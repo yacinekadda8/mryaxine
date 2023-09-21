@@ -1,11 +1,17 @@
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/constants.dart';
 import 'package:flutter_portofolio/screens/main/main_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  runApp(const MyApp());
+  if (kIsWeb) {
+    setPathUrlStrategy();
+    runApp(
+      const MyApp(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +32,8 @@ class MyApp extends StatelessWidget {
             .copyWith(
               bodyLarge: const TextStyle(color: bodyTextColor),
               bodyMedium: const TextStyle(color: bodyTextColor),
+              displayLarge: const TextStyle(color: kTextColorWhite),
+              displayMedium: const TextStyle(color: kTextColorWhite),
             ),
       ),
       home: const MainScreen(),
