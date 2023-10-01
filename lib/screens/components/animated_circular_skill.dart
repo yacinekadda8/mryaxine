@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -27,7 +26,7 @@ class AnimatedCircularSkill extends StatelessWidget {
               children: [
                 CircularProgressIndicator(
                   value: value,
-                  color: primaryColor,
+                  color: kprimaryColor,
                   backgroundColor: darkColor,
                 ),
                 Center(
@@ -53,4 +52,3 @@ class AnimatedCircularSkill extends StatelessWidget {
     );
   }
 }
-
