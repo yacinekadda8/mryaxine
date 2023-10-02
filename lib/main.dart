@@ -5,6 +5,8 @@ import 'package:flutter_portofolio/screens/main/main_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+import 'screens/components/Home Screen/home_screen.dart';
+
 void main() {
   if (kIsWeb) {
     setPathUrlStrategy();
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
               displayMedium: const TextStyle(color: kTextColorWhite),
             ),
       ),
-      home: const MainScreen(),
+      home: const HomeScreen(),
     );
   }
 }

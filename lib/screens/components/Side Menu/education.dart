@@ -46,6 +46,9 @@ class EducationText extends StatelessWidget {
         const SizedBox(width: defaultPadding / 2),
         Text(
           text,
+          style: const TextStyle(
+            fontSize: 10,
+          ),
         ),
       ],
     );
