@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/constants.dart';
 import 'package:flutter_portofolio/screens/components/Home%20Screen/mybuild_animated_text.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyBanner extends StatelessWidget {
   const MyBanner({
@@ -44,13 +45,22 @@ class MyBanner extends StatelessWidget {
                           desktop: 50,
                         )),
                   ),
-                  if ( sizingInformation.deviceScreenType == DeviceScreenType.mobile)
+                  if (sizingInformation.deviceScreenType ==
+                      DeviceScreenType.mobile)
                     const SizedBox(height: defaultPadding / 2),
                   const MyBuildAnimatedText(),
                   const SizedBox(height: defaultPadding),
-                  if ( sizingInformation.deviceScreenType != DeviceScreenType.mobile)
+                  if (sizingInformation.deviceScreenType !=
+                      DeviceScreenType.mobile)
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        final Uri url = Uri.parse('https://github.com/yacinekadda8/');// Replace with your GitHub URL
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
                       style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,

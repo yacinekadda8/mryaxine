@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
-
 
 class SocialMediaSection extends StatelessWidget {
   const SocialMediaSection({
@@ -17,18 +18,65 @@ class SocialMediaSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/github.svg")),
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://github.com/yacinekadda8/'); // Replace with your GitHub URL
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              icon: const FaIcon(
+                FontAwesomeIcons.github,
+                color: Colors.grey,
+                size: 20,
+              )),
           IconButton(
-              onPressed: () {},
-              icon:
-                  SvgPicture.asset("assets/icons/linkedin.svg")),
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://www.linkedin.com/in/merahi-noureddine/'); // Replace with your GitHub URL
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              icon: const FaIcon(
+                FontAwesomeIcons.linkedin,
+                color: Colors.grey,
+                size: 20,
+              )),
           IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/twitter.svg")),
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://www.facebook.com/yacine.casanova.10/'); // Replace with your GitHub URL
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              icon: const FaIcon(
+                FontAwesomeIcons.facebook,
+                color: Colors.grey,
+                size: 20,
+              )),
           IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/dribble.svg")),
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://dribbble.com/yaxine'); // Replace with your GitHub URL
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              icon: const FaIcon(
+                FontAwesomeIcons.dribbble,
+                color: Colors.grey,
+                size: 20,
+              )),
         ],
       ),
     );
