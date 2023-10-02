@@ -10,24 +10,24 @@ class HightLightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-      child: const Row(
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: defaultPadding),
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          HightLight(
+          HightLightItem(
             number: "2+",
-            text: "Years Experience",
+            text: "Years Experience:",
           ),
           SizedBox(width: defaultPadding * 3),
-          HightLight(
+          HightLightItem(
             number: "10+",
-            text: "Github Projects",
+            text: "Github Projects:",
           ),
           SizedBox(width: defaultPadding * 3),
-          HightLight(
-            number: "8+",
-            text: "Programing Years",
+          HightLightItem(
+            number: "8+  ",
+            text: "Programing Years:",
           ),
         ],
       ),
@@ -35,10 +35,10 @@ class HightLightSection extends StatelessWidget {
   }
 }
 
-class HightLight extends StatelessWidget {
+class HightLightItem extends StatelessWidget {
   final String number;
   final String text;
-  const HightLight({
+  const HightLightItem({
     super.key,
     required this.number,
     required this.text,
@@ -49,13 +49,13 @@ class HightLight extends StatelessWidget {
     return Row(
       children: [
         Text(
-          number,
-          style: MyStyles.textStyle22.copyWith(color: kprimaryColor),
+          text,
+          style: MyStyles.textStyle18.copyWith(color: kprimaryColor),
         ),
         const SizedBox(width: defaultPadding / 2),
         Text(
-          text,
-          style: MyStyles.textStyle22.copyWith(color: Colors.white),
+          number,
+          style: MyStyles.textStyle18.copyWith(color: Colors.white),
         ),
       ],
     );

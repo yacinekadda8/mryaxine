@@ -46,8 +46,9 @@ class EducationText extends StatelessWidget {
         const SizedBox(width: defaultPadding / 2),
         Text(
           text,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(
-            fontSize: 10,
+            fontSize: 12,
           ),
         ),
       ],
