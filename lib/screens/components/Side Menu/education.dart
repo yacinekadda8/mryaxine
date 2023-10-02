@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../constants.dart';
 import '../../../core/utils/my_styles.dart';
@@ -41,14 +42,28 @@ class EducationText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Icon(Icons.verified, color: kprimaryColor, size: 16),
+        Icon(
+          Icons.verified,
+          color: kprimaryColor,
+          size: getValueForScreenType<double>(
+            context: context,
+            mobile: 12,
+            tablet: 14,
+            desktop: 16,
+          ),
+        ),
         //const FaIcon(FontAwesomeIcons.certificate),
         const SizedBox(width: defaultPadding / 2),
         Text(
           text,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-            fontSize: 12,
+          style: TextStyle(
+            fontSize: getValueForScreenType<double>(
+              context: context,
+              mobile: 14,
+              tablet: 14,
+              desktop: 12,
+            ),
           ),
         ),
       ],
