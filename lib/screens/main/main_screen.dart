@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/constants.dart';
-import 'package:flutter_portofolio/core/utils/my_styles.dart';
 
-import '../components/side_menu.dart';
+import '../components/Side Menu/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);

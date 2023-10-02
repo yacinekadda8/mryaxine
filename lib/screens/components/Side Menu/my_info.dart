@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/constants.dart';
 
-import '../../core/utils/my_styles.dart';
+import '../../../core/utils/my_styles.dart';
+
 
 class MyInfo extends StatelessWidget {
   const MyInfo({

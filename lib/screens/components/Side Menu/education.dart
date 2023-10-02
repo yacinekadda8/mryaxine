@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import '../../core/utils/my_styles.dart';
+import '../../../constants.dart';
+import '../../../core/utils/my_styles.dart';
 
 class Education extends StatelessWidget {
   const Education({
@@ -15,8 +14,7 @@ class Education extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(
-              vertical: defaultPadding),
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Education",
             style: MyStyles.textStyle18.copyWith(

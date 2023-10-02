@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import '../../core/utils/my_styles.dart';
+import '../../../constants.dart';
+import '../../../core/utils/my_styles.dart';
+
 
 class AnimatedCircularSkill extends StatelessWidget {
   const AnimatedCircularSkill({

@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
-
-import '../../constants.dart';
-import '../../core/utils/my_styles.dart';
+import '../../../constants.dart';
+import '../../../core/utils/my_styles.dart';
 import 'more_skills_item.dart';
 
 class MoreSkills extends StatelessWidget {
