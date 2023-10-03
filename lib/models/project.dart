@@ -26,8 +26,8 @@ List<Project> projects = [
         "A simple Meal App allows users to browse a list of meals by category, mark meals as favorites, and filter meals by a lot of filters.",
   ),
   Project(
-    title: "Responsive Admin Panel or Dashboard ",
+    title: "Books Reading App With google API.",
     description:
-        "An Ecommerce Flutter Admin Panel using PHP is a powerful web application designed to manage and oversee the operations of an online store built with Flutter on the frontend and PHP on the backend. This admin panel provides essential functionality such as product management, order tracking, user management, inventory control, and sales analytics. It enables administrators to efficiently run and monitor their e-commerce business, making it easier to update products, process orders, and analyze sales data for informed decision-making.",
+        "The application features an elegant and simple user interface, making it easy for users to browse, select, and read books with ease. The design of the application uses the BLoC and MVVM architectures to achieve optimal performance and efficient data management, making it sustainable and easily maintainable.",
   ),
 ];
